@@ -1,5 +1,10 @@
+"use client";
+
+import { useRef } from "react";
 
 export default function Dashboard() {
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
   return (
     <main className="min-h-screen p-8">
       <div className="mb-10">
@@ -12,9 +17,20 @@ export default function Dashboard() {
         </h2>
       </div>
 
-      <button className="bg-white text-black text-lg px-5 py-3 rounded-xl hover:bg-gray-200 transition colors">
+      <button
+        onClick={() => fileInputRef.current?.click()}
+        className="bg-white text-black text-lg px-5 py-3 rounded-xl hover:bg-gray-200 transition-colors"
+      >
         Add Item
       </button>
+
+      <input
+        ref={fileInputRef}
+        type="file"
+        accept="image/*"
+        capture="environment"
+        hidden
+      />
     </main>
   );
 }
