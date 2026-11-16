@@ -10,11 +10,11 @@ export default function Home() {
       </p>
 
       <p className="stow-description">
-        Keep track of what you own.
+        Keep track of what you own, effortlessly
       </p>
 
       <div className="text-center">
-        <Link href="/dashboard" className="get-started hover:bg-gray-200">
+        <Link href="/dashboard" className="get-started">
           Get Started
         </Link>
       </div>
